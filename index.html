@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gost by golang-id</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gost</h1>
+        <p>Simple static file server.</p>
+
+        <p class="view"><a href="https://github.com/golang-id/gost">View the Project on GitHub <small>golang-id/gost</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/golang-id/gost/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/golang-id/gost/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/golang-id/gost">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="gost" class="anchor" href="#gost"><span class="octicon octicon-link"></span></a>gost</h1>
+
+<p>Simple static file server. Current version is 0.1.1.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight"><pre>$ go install github.com/golang-id/gost
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Running static file server on <code>http://localhost:8080</code> with current directory as document root:</p>
+
+<div class="highlight"><pre>$ gost
+</pre></div>
+
+<p>You can specify optional <code>port</code> and/or <code>path</code> (to be served as the document root):</p>
+
+<div class="highlight"><pre>$ gost -port=12345 -path="/home/gedex/my_static_web"
+</pre></div>
+
+<p>See the help:</p>
+
+<div class="highlight"><pre>$ gost --help
+Usage of gost:
+  -path="./": Path served as document root.
+  -port=8080: Port to listen
+</pre></div>
+
+<h2>
+<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<p>Provides binaries for major platforms using <a href="https://github.com/laher/goxc">goxc</a>.</p>
+
+<p>Good reference: <a href="https://github.com/jingweno/gh">https://github.com/jingweno/gh</a></p>
+
+<h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<ul>
+<li><a href="https://code.google.com/p/go-wiki/wiki/HttpStaticFiles">Serving Static Files with HTTP</a></li>
+<li><a href="https://gist.github.com/rpflorence/701407">Node.JS static file web server</a></li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>See <a href="./LICENSE">LICENSE</a> file.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/golang-id">golang-id</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
