@@ -51,7 +51,7 @@ end
 
 VERSION_FILES = {
   fullpath("main.go")   => /^const Version = "(\d+.\d+.\d+)"$/,
-  fullpath("README.md") => /Current version is \[(\d+.\d+.\d+)\]/
+  fullpath("README.md") => /Current version is (\d+.\d+.\d+)/
 }
 
 class Git
