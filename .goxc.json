@@ -1,0 +1,35 @@
+{
+  "FormatVersion": "0.8",
+  "ArtifactsDest": "build",
+  "Arch": "386,amd64",
+  "Os": "darwin,linux,windows",
+  "PackageVersion": "0.1.0",
+  "PrereleaseInfo": "snapshot",
+  "Verbosity": "v",
+  "Resources": {
+    "Include": "README*,LICENSE*",
+    "Exclude": "*.go"
+  },
+  "TaskSettings": {
+    "archive": {
+      "os": {
+        "linux": "TarGz",
+        "darwin": "TarGz"
+      }
+    },
+    "downloads-page": {
+      "fileheader": "",
+      "filename": ""
+    },
+    "pkg-build": {
+      "metadata": {
+        "description": "Simple static file server",
+        "maintainer": "Akeda Bagus (http://gedex.web.id)"
+      },
+      "metadata-deb": {
+        "Depends": "",
+        "Homepage": "https://github.com/golang-id/gost"
+      }
+    }
+  }
+}
