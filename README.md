@@ -1,7 +1,7 @@
 gost
 ====
 
-Simple static file server.
+Simple static file server. Current version is 0.0.0.
 
 ## Install
 

@@ -13,6 +13,8 @@ var (
 	path = flag.String("path", "./", "Path served as document root.")
 )
 
+const Version = "0.0.0"
+
 func main() {
 	flag.Parse()
 
