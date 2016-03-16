@@ -23,7 +23,7 @@ func main() {
 		fmt.Printf("Error: %v", err)
 	}
 
-	fmt.Printf("Static file server running at %s:%d. CTRL + C to shutdown\n", "http://localhost", *port)
+	fmt.Printf("Static file server running at :%d. CTRL + C to shutdown\n", *port)
 	err = http.ListenAndServe(":"+strconv.Itoa(*port), http.FileServer(http.Dir(docroot)))
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
