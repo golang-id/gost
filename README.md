@@ -23,6 +23,13 @@ You can specify optional `port` and/or `path` (to be served as the document root
 $ gost -port=12345 -path="/home/gedex/my_static_web"
 ~~~
 
+You can also specify an IP address if needed. In this example the server will
+bind to IP address 10.0.1.5 on port 9000.
+
+~~~text
+$ gost -ip=10.0.1.5 -port=9000
+~~~
+
 See the help:
 
 ~~~text
@@ -30,6 +37,7 @@ $ gost --help
 Usage of gost:
   -path="./": Path served as document root.
   -port=8080: Port to listen
+  -ip="": IP address to bind to
 ~~~
 
 ## Roadmap

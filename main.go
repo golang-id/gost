@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
-	"strconv"
 )
 
 var (
+	ip   = flag.String("ip", "", "Address to bind to")
 	port = flag.Int("port", 8080, "Port to listen")
 	path = flag.String("path", "./", "Path served as document root.")
 )
@@ -23,9 +23,14 @@ func main() {
 		fmt.Printf("Error: %v", err)
 	}
 
-	fmt.Printf("Static file server running at :%d. CTRL + C to shutdown\n", *port)
-	err = http.ListenAndServe(":"+strconv.Itoa(*port), http.FileServer(http.Dir(docroot)))
-	if err != nil {
+	address := fmt.Sprintf("%v:%v", *ip, *port)
+
+	fmt.Printf("Static file server running at %v. CTRL + C to shutdown\n",
+		address)
+
+	handler := http.FileServer(http.Dir(docroot))
+
+	if err = http.ListenAndServe(address, handler); err != nil {
 		fmt.Printf("Error: %v\n", err)
 	}
 }
