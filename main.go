@@ -5,12 +5,11 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
-	"strconv"
 )
 
 var (
-	port = flag.Int("port", 8080, "Port to listen")
-	path = flag.String("path", "./", "Path served as document root.")
+	listen = flag.String("listen", ":8080", "Address to bind to")
+	path   = flag.String("path", "./", "Path served as document root.")
 )
 
 const Version = "0.1.1"
@@ -23,9 +22,12 @@ func main() {
 		fmt.Printf("Error: %v", err)
 	}
 
-	fmt.Printf("Static file server running at :%d. CTRL + C to shutdown\n", *port)
-	err = http.ListenAndServe(":"+strconv.Itoa(*port), http.FileServer(http.Dir(docroot)))
-	if err != nil {
+	fmt.Printf("Static file server running at %v. CTRL + C to shutdown\n",
+		*listen)
+
+	handler := http.FileServer(http.Dir(docroot))
+
+	if err = http.ListenAndServe(*listen, handler); err != nil {
 		fmt.Printf("Error: %v\n", err)
 	}
 }
